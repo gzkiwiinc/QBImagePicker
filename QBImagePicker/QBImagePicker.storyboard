@@ -71,7 +71,7 @@
                                             <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePicker_cell_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="dqz-ie-xcb">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_imagePicker_cell_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="dqz-ie-xcb">
                                             <rect key="frame" x="303" y="26" width="7" height="12"/>
                                         </imageView>
                                     </subviews>
@@ -246,7 +246,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePicker_select_camera" translatesAutoresizingMaskIntoConstraints="NO" id="XBP-Ob-oig">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_select_album_camera.png" translatesAutoresizingMaskIntoConstraints="NO" id="XBP-Ob-oig">
                                             <rect key="frame" x="24" y="26" width="31" height="27"/>
                                         </imageView>
                                     </subviews>
@@ -319,8 +319,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="imagePicker_cell_arrow" width="7" height="12"/>
+        <image name="camera_imagePicker_cell_arrow.png" width="7" height="12"/>
         <image name="imagePicker_nav_back.png" width="10" height="17"/>
-        <image name="imagePicker_select_camera" width="31" height="27"/>
+        <image name="photo_select_album_camera.png" width="31" height="27"/>
     </resources>
 </document>
