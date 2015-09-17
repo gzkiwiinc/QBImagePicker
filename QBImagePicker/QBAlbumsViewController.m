@@ -369,14 +369,14 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     }
     
     if (fetchResult.count == 0) {
-        cell.imageView3.hidden = NO;
-        cell.imageView2.hidden = NO;
+        cell.imageView3.hidden = YES;
+        cell.imageView2.hidden = YES;
         
         // Set placeholder image
         UIImage *placeholderImage = [self placeholderImageWithSize:cell.imageView1.frame.size];
         cell.imageView1.image = placeholderImage;
-        cell.imageView2.image = placeholderImage;
-        cell.imageView3.image = placeholderImage;
+//        cell.imageView2.image = placeholderImage;
+//        cell.imageView3.image = placeholderImage;
     }
     
     // Album title

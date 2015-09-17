@@ -27,7 +27,7 @@
 {
     QBImagePickerController *imagePickerController = [QBImagePickerController new];
     imagePickerController.delegate = self;
-    imagePickerController.mediaType = QBImagePickerMediaTypeImage;
+    imagePickerController.mediaType = QBImagePickerMediaTypeVideo;
     imagePickerController.allowsMultipleSelection = (indexPath.section == 1);
     imagePickerController.showsNumberOfSelectedAssets = YES;
     //imagePickerController.numberOfColumnsInPortrait = 3;

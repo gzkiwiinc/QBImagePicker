@@ -49,13 +49,18 @@
         }
         
         [self setUpAlbumsViewController];
-        
-        // Set instance
-        QBAlbumsViewController *albumsViewController = (QBAlbumsViewController *)self.albumsNavigationController.topViewController;
-        albumsViewController.imagePickerController = self;
     }
     
     return self;
+}
+
+- (void)setMediaType:(QBImagePickerMediaType)mediaType {
+    
+    _mediaType = mediaType;
+    
+    // Set instance
+    QBAlbumsViewController *albumsViewController = (QBAlbumsViewController *)self.albumsNavigationController.topViewController;
+    albumsViewController.imagePickerController = self;
 }
 
 - (void)setUpAlbumsViewController
