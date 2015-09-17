@@ -99,13 +99,17 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    QBAssetsViewController *assetsViewController = segue.destinationViewController;
+
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backItem;
     
-    if (self.tableView.indexPathForSelectedRow && self.imagePickerController) {
+    QBAssetsViewController *assetsViewController = segue.destinationViewController;
+    if (self.imagePickerController) {
+        assetsViewController.imagePickerController = self.imagePickerController;
+    }
+    if (self.tableView.indexPathForSelectedRow) {
         
         NSUInteger row = self.tableView.indexPathForSelectedRow.row;
-        
-        assetsViewController.imagePickerController = self.imagePickerController;
         assetsViewController.assetCollection = self.assetCollections[row];
     }
     self.assetsViewController = assetsViewController;

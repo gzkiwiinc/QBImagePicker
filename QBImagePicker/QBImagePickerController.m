@@ -60,10 +60,21 @@
 
 - (void)setUpAlbumsViewController
 {
+    UIImage *image = [UIImage imageNamed:@"imagePicker_nav_back" inBundle:self.assetBundle compatibleWithTraitCollection:[UITraitCollection traitCollectionWithDisplayScale:0.0]];
+
     // Add QBAlbumsViewController as a child
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"QBImagePicker" bundle:self.assetBundle];
     UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"QBAlbumsNavigationController"];
     
+    navigationController.navigationBar.translucent = NO;
+    navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.502f green:0.502f blue:0.502f alpha:1.00f];
+    navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.200f green:0.200f blue:0.200f alpha:1.00f];
+    
+    navigationController.navigationBar.backIndicatorImage = image;
+    navigationController.navigationBar.backIndicatorTransitionMaskImage = image;
+
+    navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+
     [self addChildViewController:navigationController];
     
     navigationController.view.frame = self.view.bounds;

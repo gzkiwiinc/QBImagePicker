@@ -75,6 +75,9 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 {
     [super viewDidLoad];
     
+    [self.navigationController.navigationBar setBackIndicatorImage:[UIImage imageNamed:@"imagePicker_nav_back"]];
+    [self.navigationController.navigationBar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"imagePicker_nav_back"]];
+    
     [self setUpToolbarItems];
     [self resetCachedAssets];
     
@@ -192,7 +195,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     // Space
     UIBarButtonItem *leftSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:NULL];
     UIBarButtonItem *rightSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:NULL];
-    
+
     // Info label
     NSDictionary *attributes = @{ NSForegroundColorAttributeName: [UIColor blackColor] };
     UIBarButtonItem *infoButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:NULL];

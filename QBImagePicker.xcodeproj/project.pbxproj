@@ -42,6 +42,9 @@
 		CA1FC6C21BA9646C00DE7C8C /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1FC6C11BA9646C00DE7C8C /* images.xcassets */; };
 		CA1FC6C51BA974D400DE7C8C /* QBAssetCameraCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CA1FC6C31BA974D400DE7C8C /* QBAssetCameraCell.h */; };
 		CA1FC6C61BA974D400DE7C8C /* QBAssetCameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1FC6C41BA974D400DE7C8C /* QBAssetCameraCell.m */; };
+		CA90734E1BAA5CB4009DF05F /* imagePicker_nav_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA90734B1BAA5CB4009DF05F /* imagePicker_nav_back@3x.png */; settings = {ASSET_TAGS = (); }; };
+		CA90734F1BAA5CB4009DF05F /* imagePicker_nav_back.png in Resources */ = {isa = PBXBuildFile; fileRef = CA90734C1BAA5CB4009DF05F /* imagePicker_nav_back.png */; settings = {ASSET_TAGS = (); }; };
+		CA9073501BAA5CB4009DF05F /* imagePicker_nav_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA90734D1BAA5CB4009DF05F /* imagePicker_nav_back@2x.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +144,9 @@
 		CA1FC6C11BA9646C00DE7C8C /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		CA1FC6C31BA974D400DE7C8C /* QBAssetCameraCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAssetCameraCell.h; sourceTree = "<group>"; };
 		CA1FC6C41BA974D400DE7C8C /* QBAssetCameraCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAssetCameraCell.m; sourceTree = "<group>"; };
+		CA90734B1BAA5CB4009DF05F /* imagePicker_nav_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imagePicker_nav_back@3x.png"; sourceTree = "<group>"; };
+		CA90734C1BAA5CB4009DF05F /* imagePicker_nav_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagePicker_nav_back.png; sourceTree = "<group>"; };
+		CA90734D1BAA5CB4009DF05F /* imagePicker_nav_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imagePicker_nav_back@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +328,9 @@
 		AAF1CA241ACE5665005F6295 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CA90734B1BAA5CB4009DF05F /* imagePicker_nav_back@3x.png */,
+				CA90734C1BAA5CB4009DF05F /* imagePicker_nav_back.png */,
+				CA90734D1BAA5CB4009DF05F /* imagePicker_nav_back@2x.png */,
 				AAF1CA221ACE5598005F6295 /* QBImagePicker.storyboard */,
 				CA1FC6B31BA9549C00DE7C8C /* QBImagePicker.strings */,
 				CA1FC6C11BA9646C00DE7C8C /* images.xcassets */,
@@ -483,6 +492,9 @@
 			files = (
 				CA1FC6C21BA9646C00DE7C8C /* images.xcassets in Resources */,
 				AAF1CA231ACE5598005F6295 /* QBImagePicker.storyboard in Resources */,
+				CA90734F1BAA5CB4009DF05F /* imagePicker_nav_back.png in Resources */,
+				CA9073501BAA5CB4009DF05F /* imagePicker_nav_back@2x.png in Resources */,
+				CA90734E1BAA5CB4009DF05F /* imagePicker_nav_back@3x.png in Resources */,
 				CA1FC6B11BA9549C00DE7C8C /* QBImagePicker.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -786,7 +798,7 @@
 				);
 				INFOPLIST_FILE = QBImagePickerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.questbeat.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.questbeat.QBImagePickerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -798,7 +810,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = QBImagePickerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.questbeat.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.questbeat.QBImagePickerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
