@@ -22,7 +22,7 @@
 - (void)qb_imagePickerController:(QBImagePickerController *)imagePickerController didDeselectAsset:(PHAsset *)asset;
 
 - (void)qb_imagePickerControllerSelectCamera:(QBImagePickerController *)imagePickerController;
-
+- (void)qb_imagePickerController:(QBImagePickerController *)imagePickerController navigationController:(UINavigationController *)navigationController didSelectAsset:(PHAsset *)asset;
 @end
 
 typedef NS_ENUM(NSUInteger, QBImagePickerMediaType) {

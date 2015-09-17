@@ -640,6 +640,11 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
         if ([imagePickerController.delegate respondsToSelector:@selector(qb_imagePickerController:didSelectAsset:)]) {
             [imagePickerController.delegate qb_imagePickerController:imagePickerController didSelectAsset:asset];
         }
+        
+        if ([self.imagePickerController.delegate respondsToSelector:@selector(qb_imagePickerController:navigationController:didSelectAsset:)]) {
+            
+            [imagePickerController.delegate qb_imagePickerController:imagePickerController navigationController:self.navigationController didSelectAsset:asset];
+        }
     }
 }
 

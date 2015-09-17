@@ -75,6 +75,8 @@
     NSLog(@"Selected assets:");
     NSLog(@"%@", assets);
     
+    NSLog(@"========= %@",imagePickerController.navigationController);
+    
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
