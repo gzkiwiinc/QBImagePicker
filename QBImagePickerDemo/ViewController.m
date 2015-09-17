@@ -27,9 +27,10 @@
 {
     QBImagePickerController *imagePickerController = [QBImagePickerController new];
     imagePickerController.delegate = self;
-    imagePickerController.mediaType = QBImagePickerMediaTypeAny;
+    imagePickerController.mediaType = QBImagePickerMediaTypeImage;
     imagePickerController.allowsMultipleSelection = (indexPath.section == 1);
     imagePickerController.showsNumberOfSelectedAssets = YES;
+    //imagePickerController.numberOfColumnsInPortrait = 3;
     
     if (indexPath.section == 1) {
         switch (indexPath.row) {
@@ -54,6 +55,13 @@
             default:
                 break;
         }
+    }else {
+        
+        imagePickerController.assetCollectionSubtypes = @[@(PHAssetCollectionSubtypeSmartAlbumUserLibrary),
+                                                          @(PHAssetCollectionSubtypeAlbumMyPhotoStream),
+                                                          @(PHAssetCollectionSubtypeSmartAlbumFavorites),
+                                                          @(PHAssetCollectionSubtypeSmartAlbumRecentlyAdded)];
+        
     }
     
     [self presentViewController:imagePickerController animated:YES completion:NULL];
@@ -74,6 +82,11 @@
 {
     NSLog(@"Canceled.");
     
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)qb_imagePickerControllerSelectCamera:(QBImagePickerController *)imagePickerController {
+    NSLog(@"Open Camera.");
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 

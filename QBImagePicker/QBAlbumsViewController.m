@@ -33,15 +33,14 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 @property (nonatomic, copy) NSArray *fetchResults;
 @property (nonatomic, copy) NSArray *assetCollections;
 
+@property (nonatomic, weak)QBAssetsViewController *assetsViewController;
+
 @end
 
 @implementation QBAlbumsViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    [self setUpToolbarItems];
+- (void)awakeFromNib {
+    [super awakeFromNib];
     
     // Fetch user albums and smart albums
     PHFetchResult *smartAlbums = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAny options:nil];
@@ -52,6 +51,22 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     
     // Register observer
     [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
+
+    [self performSegueWithIdentifier:@"QBAssetsViewControllerSegue" sender:nil];
+}
+
+- (void)setImagePickerController:(QBImagePickerController *)imagePickerController {
+    _imagePickerController = imagePickerController;
+    
+    self.assetsViewController.imagePickerController = _imagePickerController;
+    self.assetsViewController.assetCollection = [self.assetCollections firstObject];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self setUpToolbarItems];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -85,8 +100,15 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     QBAssetsViewController *assetsViewController = segue.destinationViewController;
-    assetsViewController.imagePickerController = self.imagePickerController;
-    assetsViewController.assetCollection = self.assetCollections[self.tableView.indexPathForSelectedRow.row];
+    
+    if (self.tableView.indexPathForSelectedRow && self.imagePickerController) {
+        
+        NSUInteger row = self.tableView.indexPathForSelectedRow.row;
+        
+        assetsViewController.imagePickerController = self.imagePickerController;
+        assetsViewController.assetCollection = self.assetCollections[row];
+    }
+    self.assetsViewController = assetsViewController;
 }
 
 
@@ -154,7 +176,10 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     NSMutableArray *assetCollections = [NSMutableArray array];
     
     // Filter albums
-    NSArray *assetCollectionSubtypes = self.imagePickerController.assetCollectionSubtypes;
+    NSArray *assetCollectionSubtypes = @[@(PHAssetCollectionSubtypeSmartAlbumUserLibrary),
+                                         @(PHAssetCollectionSubtypeAlbumMyPhotoStream),
+                                         @(PHAssetCollectionSubtypeSmartAlbumFavorites),
+                                         @(PHAssetCollectionSubtypeSmartAlbumRecentlyAdded)];
     NSMutableDictionary *smartAlbums = [NSMutableDictionary dictionaryWithCapacity:assetCollectionSubtypes.count];
     NSMutableArray *userAlbums = [NSMutableArray array];
     

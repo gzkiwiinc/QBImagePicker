@@ -38,7 +38,10 @@
 		AAF1CA301ACE6E46005F6295 /* QBAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF1CA2E1ACE6E46005F6295 /* QBAssetsViewController.m */; };
 		AAF1CA331ACE6FB5005F6295 /* QBAssetCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF1CA311ACE6FB5005F6295 /* QBAssetCell.h */; };
 		AAF1CA341ACE6FB5005F6295 /* QBAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF1CA321ACE6FB5005F6295 /* QBAssetCell.m */; };
-		E521B0A21B01D9300079461F /* QBImagePicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAF1CA3F1ACE8918005F6295 /* QBImagePicker.strings */; };
+		CA1FC6B11BA9549C00DE7C8C /* QBImagePicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA1FC6B31BA9549C00DE7C8C /* QBImagePicker.strings */; };
+		CA1FC6C21BA9646C00DE7C8C /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1FC6C11BA9646C00DE7C8C /* images.xcassets */; };
+		CA1FC6C51BA974D400DE7C8C /* QBAssetCameraCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CA1FC6C31BA974D400DE7C8C /* QBAssetCameraCell.h */; };
+		CA1FC6C61BA974D400DE7C8C /* QBAssetCameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1FC6C41BA974D400DE7C8C /* QBAssetCameraCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +83,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		07A50A481B331A840010E048 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
 		790A850D1AE7D4D9008E2A80 /* QBSlomoIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBSlomoIconView.h; sourceTree = "<group>"; };
 		790A850E1AE7D4D9008E2A80 /* QBSlomoIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBSlomoIconView.m; sourceTree = "<group>"; };
 		AA3AD06D1ACF9A3A00BF523E /* QBVideoIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBVideoIconView.h; sourceTree = "<group>"; };
@@ -119,10 +121,26 @@
 		AAF1CA2E1ACE6E46005F6295 /* QBAssetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = QBAssetsViewController.m; sourceTree = "<group>"; };
 		AAF1CA311ACE6FB5005F6295 /* QBAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAssetCell.h; sourceTree = "<group>"; };
 		AAF1CA321ACE6FB5005F6295 /* QBAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAssetCell.m; sourceTree = "<group>"; };
-		AAF1CA3E1ACE8918005F6295 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
-		AAF1CA401ACE8A8B005F6295 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
-		E521B0A11B01D6810079461F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/QBImagePicker.strings"; sourceTree = "<group>"; };
-		74BB93661B2CE91A0044EB60 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
+		CA1FC6A41BA953D300DE7C8C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		CA1FC6A51BA953D300DE7C8C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		CA1FC6A91BA9540300DE7C8C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		CA1FC6AA1BA9540300DE7C8C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CA1FC6B21BA9549C00DE7C8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
+		CA1FC6B41BA9549E00DE7C8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
+		CA1FC6B51BA954A000DE7C8C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/QBImagePicker.strings"; sourceTree = "<group>"; };
+		CA1FC6B71BA954A500DE7C8C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
+		CA1FC6B81BA954BF00DE7C8C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		CA1FC6B91BA954BF00DE7C8C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		CA1FC6BA1BA954BF00DE7C8C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/QBImagePicker.strings"; sourceTree = "<group>"; };
+		CA1FC6BB1BA954CB00DE7C8C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		CA1FC6BC1BA954CB00DE7C8C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CA1FC6BD1BA954CB00DE7C8C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
+		CA1FC6BE1BA9555A00DE7C8C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		CA1FC6BF1BA9555A00DE7C8C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CA1FC6C01BA9555A00DE7C8C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
+		CA1FC6C11BA9646C00DE7C8C /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
+		CA1FC6C31BA974D400DE7C8C /* QBAssetCameraCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAssetCameraCell.h; sourceTree = "<group>"; };
+		CA1FC6C41BA974D400DE7C8C /* QBAssetCameraCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAssetCameraCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +192,8 @@
 				790A850E1AE7D4D9008E2A80 /* QBSlomoIconView.m */,
 				AA3AD0711ACFA06700BF523E /* QBVideoIndicatorView.h */,
 				AA3AD0721ACFA06700BF523E /* QBVideoIndicatorView.m */,
+				CA1FC6C31BA974D400DE7C8C /* QBAssetCameraCell.h */,
+				CA1FC6C41BA974D400DE7C8C /* QBAssetCameraCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -303,7 +323,8 @@
 			isa = PBXGroup;
 			children = (
 				AAF1CA221ACE5598005F6295 /* QBImagePicker.storyboard */,
-				AAF1CA3F1ACE8918005F6295 /* QBImagePicker.strings */,
+				CA1FC6B31BA9549C00DE7C8C /* QBImagePicker.strings */,
+				CA1FC6C11BA9646C00DE7C8C /* images.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -325,6 +346,7 @@
 				AAA8FE091ACDA079002A9710 /* QBImagePicker.h in Headers */,
 				AABBF0901ACEDDFF003188A3 /* QBCheckmarkView.h in Headers */,
 				AAA8FE211ACDA090002A9710 /* QBImagePickerController.h in Headers */,
+				CA1FC6C51BA974D400DE7C8C /* QBAssetCameraCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,10 +457,11 @@
 			knownRegions = (
 				en,
 				Base,
-				ja,
 				"zh-Hans",
-				es,
+				ja,
+				"zh-Hant",
 				de,
+				es,
 			);
 			mainGroup = AAA8FDF91ACDA079002A9710;
 			productRefGroup = AAA8FE041ACDA079002A9710 /* Products */;
@@ -458,8 +481,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E521B0A21B01D9300079461F /* QBImagePicker.strings in Resources */,
+				CA1FC6C21BA9646C00DE7C8C /* images.xcassets in Resources */,
 				AAF1CA231ACE5598005F6295 /* QBImagePicker.storyboard in Resources */,
+				CA1FC6B11BA9549C00DE7C8C /* QBImagePicker.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA1FC6C61BA974D400DE7C8C /* QBAssetCameraCell.m in Sources */,
 				AAF1CA341ACE6FB5005F6295 /* QBAssetCell.m in Sources */,
 				AA3AD0701ACF9A3A00BF523E /* QBVideoIconView.m in Sources */,
 				790A85101AE7D4D9008E2A80 /* QBSlomoIconView.m in Sources */,
@@ -557,6 +582,11 @@
 			isa = PBXVariantGroup;
 			children = (
 				AAA8FE341ACDA0CE002A9710 /* Base */,
+				CA1FC6A41BA953D300DE7C8C /* zh-Hans */,
+				CA1FC6A91BA9540300DE7C8C /* ja */,
+				CA1FC6B81BA954BF00DE7C8C /* zh-Hant */,
+				CA1FC6BB1BA954CB00DE7C8C /* de */,
+				CA1FC6BE1BA9555A00DE7C8C /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -565,18 +595,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				AAA8FE391ACDA0CE002A9710 /* Base */,
+				CA1FC6A51BA953D300DE7C8C /* zh-Hans */,
+				CA1FC6AA1BA9540300DE7C8C /* ja */,
+				CA1FC6B91BA954BF00DE7C8C /* zh-Hant */,
+				CA1FC6BC1BA954CB00DE7C8C /* de */,
+				CA1FC6BF1BA9555A00DE7C8C /* es */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
-		AAF1CA3F1ACE8918005F6295 /* QBImagePicker.strings */ = {
+		CA1FC6B31BA9549C00DE7C8C /* QBImagePicker.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AAF1CA3E1ACE8918005F6295 /* en */,
-				AAF1CA401ACE8A8B005F6295 /* ja */,
-				E521B0A11B01D6810079461F /* zh-Hans */,
-				07A50A481B331A840010E048 /* es */,
-				74BB93661B2CE91A0044EB60 /* de */
+				CA1FC6B21BA9549C00DE7C8C /* Base */,
+				CA1FC6B41BA9549E00DE7C8C /* en */,
+				CA1FC6B51BA954A000DE7C8C /* zh-Hans */,
+				CA1FC6B71BA954A500DE7C8C /* ja */,
+				CA1FC6BA1BA954BF00DE7C8C /* zh-Hant */,
+				CA1FC6BD1BA954CB00DE7C8C /* de */,
+				CA1FC6C01BA9555A00DE7C8C /* es */,
 			);
 			name = QBImagePicker.strings;
 			sourceTree = "<group>";
@@ -673,6 +710,7 @@
 		AAA8FE1A1ACDA079002A9710 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -703,6 +741,7 @@
 		AAA8FE1D1ACDA079002A9710 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -734,6 +773,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -748,6 +789,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = QBImagePickerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -758,6 +800,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

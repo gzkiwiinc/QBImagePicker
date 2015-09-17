@@ -10,6 +10,12 @@
 
 @implementation QBAlbumCell
 
+- (void)awakeFromNib {
+    UIView *selectedBackgroundView = [UIView new];
+    selectedBackgroundView.backgroundColor = [UIColor colorWithRed:0.200f green:0.200f blue:0.200f alpha:1.00f];
+    self.selectedBackgroundView = selectedBackgroundView;
+}
+
 - (void)setBorderWidth:(CGFloat)borderWidth
 {
     _borderWidth = borderWidth;
