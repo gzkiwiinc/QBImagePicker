@@ -14,8 +14,6 @@
 
 @interface QBImagePickerController ()
 
-@property (nonatomic, strong) UINavigationController *albumsNavigationController;
-
 @property (nonatomic, strong) NSBundle *assetBundle;
 
 @end
