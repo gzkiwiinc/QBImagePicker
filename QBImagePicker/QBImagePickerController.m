@@ -33,7 +33,7 @@
 
 - (instancetype)init
 {
-    self = [super init];
+    self = [super initWithNibName:nil bundle:nil];
     
     if (self) {
         // Set default values
