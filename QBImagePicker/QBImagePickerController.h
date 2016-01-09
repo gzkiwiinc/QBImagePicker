@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <Photos/Photos.h>
 
+@interface NSBundle (QBImagePicker)
+
+/**
+ *  @return The bundle for assets in QBImagePickerController.
+ */
++ (NSBundle *)assetBundle;
+
+@end
+
 @class QBImagePickerController;
 
 @protocol QBImagePickerControllerDelegate <NSObject>
@@ -50,5 +59,7 @@ typedef NS_ENUM(NSUInteger, QBImagePickerMediaType) {
 
 @property (nonatomic, assign) NSUInteger numberOfColumnsInPortrait;
 @property (nonatomic, assign) NSUInteger numberOfColumnsInLandscape;
+
+- (instancetype)init;
 
 @end

@@ -12,9 +12,17 @@
 // ViewControllers
 #import "QBAlbumsViewController.h"
 
-@interface QBImagePickerController ()
+@implementation NSBundle (QBImagePicker)
 
-@property (nonatomic, strong) NSBundle *assetBundle;
++ (NSBundle *)assetBundle {
+    NSString *bundleResourcePath = [NSBundle bundleForClass:[QBImagePickerController class]].resourcePath;
+    NSString *assetPath = [bundleResourcePath stringByAppendingPathComponent:@"QBImagePicker.bundle"];
+    return [NSBundle bundleWithPath:assetPath];
+}
+
+@end
+
+@interface QBImagePickerController ()
 
 @end
 
@@ -39,13 +47,6 @@
         
         _selectedAssets = [NSMutableOrderedSet orderedSet];
         
-        // Get asset bundle
-        self.assetBundle = [NSBundle bundleForClass:[self class]];
-        NSString *bundlePath = [self.assetBundle pathForResource:@"QBImagePicker" ofType:@"bundle"];
-        if (bundlePath) {
-            self.assetBundle = [NSBundle bundleWithPath:bundlePath];
-        }
-        
         [self setUpAlbumsViewController];
     }
     
@@ -63,10 +64,10 @@
 
 - (void)setUpAlbumsViewController
 {
-    UIImage *image = [UIImage imageNamed:@"imagePicker_nav_back" inBundle:self.assetBundle compatibleWithTraitCollection:[UITraitCollection traitCollectionWithDisplayScale:0.0]];
+    UIImage *image = [UIImage imageNamed:@"imagePicker_nav_back" inBundle:[NSBundle assetBundle] compatibleWithTraitCollection:[UITraitCollection traitCollectionWithDisplayScale:0.0]];
 
     // Add QBAlbumsViewController as a child
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"QBImagePicker" bundle:self.assetBundle];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"QBImagePicker" bundle:[NSBundle assetBundle]];
     UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"QBAlbumsNavigationController"];
     
     navigationController.navigationBar.translucent = NO;
