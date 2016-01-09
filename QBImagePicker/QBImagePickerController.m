@@ -15,9 +15,12 @@
 @implementation NSBundle (QBImagePicker)
 
 + (NSBundle *)assetBundle {
-    NSString *bundleResourcePath = [NSBundle bundleForClass:[QBImagePickerController class]].resourcePath;
-    NSString *assetPath = [bundleResourcePath stringByAppendingPathComponent:@"QBImagePicker.bundle"];
-    return [NSBundle bundleWithPath:assetPath];
+    NSBundle *mainBundle = [NSBundle bundleForClass:[QBImagePickerController class]];
+    NSString *bundlePath = [mainBundle pathForResource:@"QBImagePicker" ofType:@"bundle"];
+    if (bundlePath) {
+        return [NSBundle bundleWithPath:bundlePath];
+    }
+    return mainBundle;
 }
 
 @end
